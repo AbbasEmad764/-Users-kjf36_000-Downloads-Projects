@@ -1,0 +1,79 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    background: url("/NavigationBar/imgs/hdrbg2.jpg") no-repeat center;
+    background-size: cover;
+    height: 100vh;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: darkcyan;
+    color: white;
+    padding: 1rem;
+}
+
+.logo {
+    width: 100px;
+    height: 100%;
+}
+
+.btn:hover {
+    opacity: 0.7;
+}
+
+.linksMenu li {
+    display: inline-block;
+    padding: 1rem;
+}
+
+.linksMenu a {
+    position: relative;
+    text-decoration: none;
+    color: white;
+    padding-bottom: 3px;
+    font-size: 1rem;
+    transition: 1s ease;
+}
+
+.linksMenu a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    width: 0;
+    background: rgb(1, 179, 155);
+    transition: 1s ease;
+}
+
+.linksMenu a:hover::after {
+    width: 100%;
+}
+
+.linksMenu .btn,
+.menu .btn {
+    padding: 10px;
+    background: rgba(1, 179, 179, 0.678);
+    color: white;
+    border: none;
+    transition: 1s ease;
+}
+
+@media screen and (max-width: 468px) {
+    .menu-wrap {
+        display: block;
+    }
+    .linksMenu {
+        display: none;
+    }
+}
